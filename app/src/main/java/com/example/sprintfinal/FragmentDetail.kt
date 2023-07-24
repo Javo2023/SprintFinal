@@ -5,54 +5,43 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.sprintfinal.databinding.FragmentShoesListBinding
-import com.example.sprintfinal.databinding.ItemLayoutBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_PARAM1 = "nombre"
+private const val ARG_PARAM2 = "url"
+private const val ARG_PARAM3 = "detalle"
+
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ShoesListFragment.newInstance] factory method to
+ * Use the [FragmentDetail.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ShoesListFragment : Fragment() {
-
-    lateinit var binding : FragmentShoesListBinding //
-
-    var adapter = Adapter()
-
+class FragmentDetail : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var param3: String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-        }
+            param3 = it.getString(ARG_PARAM2)
 
+        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentShoesListBinding.inflate(layoutInflater,container, false)
-        setRvAdapter()
-
         // Inflate the layout for this fragment
-        return binding.root
+        return inflater.inflate(R.layout.fragment_detail, container, false)
     }
-
-    fun setRvAdapter(){
-        adapter.setData(ShoesList.getShoeList())   //
-        binding.recyclerView.adapter = adapter
-    }
-    
 
     companion object {
         /**
@@ -61,15 +50,16 @@ class ShoesListFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ShoesListFragment.
+         * @return A new instance of fragment FragmentDetail.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ShoesListFragment().apply {
+            FragmentDetail().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
+                    putString(ARG_PARAM3, param3)
                 }
             }
     }

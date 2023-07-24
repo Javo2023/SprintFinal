@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.example.sprintfinal.databinding.ItemLayoutBinding
 
 class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>(){
@@ -24,13 +25,20 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>(){
         return shoesList.size
     }
 
+    fun setData(shoeList: List<Shoes>){
+        this.shoesList = shoeList.toMutableList()
+    }
+
     class ViewHolder (val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(shoe: Shoes) {
             binding.tvNombre.text = shoe.nombre
             binding.tvPrecio.text = shoe.precio.toString()
+            binding.imageView.load(shoe.url)
+
 
 
         }
+
 
 
     }
