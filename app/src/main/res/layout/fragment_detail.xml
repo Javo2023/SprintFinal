@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".DetailFragment" >
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,27 +20,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/ButtonAddToCart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Agregar al carrito"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/tvDetail"
-                app:layout_constraintHorizontal_bias="0.492"
-                app:layout_constraintStart_toStartOf="@+id/tvDetail"
-                app:layout_constraintTop_toBottomOf="@+id/tvDetail"
-                app:layout_constraintVertical_bias="0.098" />
-
-            <TextView
-                android:id="@+id/tvDetail"
-                android:layout_width="289dp"
-                android:layout_height="125dp"
-                android:text="TextView"
-                app:layout_constraintEnd_toEndOf="@+id/tvPrecio1"
-                app:layout_constraintStart_toStartOf="@+id/tvPrecio1"
-                tools:layout_editor_absoluteY="351dp" />
+            <ImageView
+                android:id="@+id/ivDetail"
+                android:layout_width="219dp"
+                android:layout_height="238dp"
+                android:layout_marginTop="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/tvPrecio1"
@@ -61,17 +51,29 @@
                 app:layout_constraintStart_toStartOf="@+id/ivDetail"
                 app:layout_constraintTop_toBottomOf="@+id/ivDetail" />
 
-            <ImageView
-                android:id="@+id/ivDetail"
-                android:layout_width="184dp"
-                android:layout_height="164dp"
-                android:layout_marginTop="44dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="289dp"
+                android:layout_height="125dp"
+                android:layout_marginTop="48dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/tvPrecio1"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="@+id/tvPrecio1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrecio1" />
+
+            <Button
+                android:id="@+id/ButtonAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Agregar al carrito"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvDetail"
+                app:layout_constraintStart_toStartOf="@+id/tvDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ShoesListFragment : Fragment() {
 
-    lateinit var binding : FragmentShoesListBinding //
+     lateinit var binding :FragmentShoesListBinding //
 
     var adapter = Adapter()
 

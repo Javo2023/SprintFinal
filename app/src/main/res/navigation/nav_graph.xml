@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentCart"
-        android:name="com.example.sprintfinal.FragmentCart"
+        android:name="com.example.sprintfinal.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
 </navigation>

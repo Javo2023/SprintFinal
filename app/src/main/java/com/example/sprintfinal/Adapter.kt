@@ -8,6 +8,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
+import com.bumptech.glide.Glide
 import com.example.sprintfinal.databinding.ItemLayoutBinding
 
 class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
@@ -37,7 +38,8 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
         fun bind(shoe: Shoes) {
             binding.tvNombre.text = shoe.nombre
             binding.tvPrecio.text = shoe.precio.toString()
-            binding.imageView.load(shoe.url)
+            //binding.imageView.load(shoe.url)
+            Glide.with(binding.root).load(shoe.url).into(binding.imageView)
 
             binding.cvData.setOnClickListener {
           Log.d("Adapter", "Item clicked: ${shoe.nombre}")
