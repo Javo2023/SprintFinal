@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ShoesListFragment" >
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView3"
+        android:name="com.example.sprintfinal.ShoesListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"

@@ -4,59 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentDetail" >
+    tools:context=".DetailFragment" >
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="184dp"
-        android:layout_height="164dp"
-        android:layout_marginTop="36dp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.example.sprintfinal.DetailFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
 
-    <TextView
-        android:id="@+id/tvNombre1"
-        android:layout_width="125dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/tvPrecio1"
-        android:layout_width="130dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="36dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/tvNombre1"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/tvNombre1"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombre1" />
-
-    <TextView
-        android:id="@+id/tvDetail"
-        android:layout_width="289dp"
-        android:layout_height="125dp"
-        android:layout_marginBottom="248dp"
-        android:text="TextView"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvPrecio1"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="@+id/tvPrecio1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/ButtonAddToCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:text="Agregar al carrito"
-        app:layout_constraintEnd_toEndOf="@+id/tvDetail"
-        app:layout_constraintStart_toStartOf="@+id/tvDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvDetail" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/ButtonAddToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Agregar al carrito"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvDetail"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/tvDetail"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetail"
+                app:layout_constraintVertical_bias="0.098" />
+
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="289dp"
+                android:layout_height="125dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/tvPrecio1"
+                app:layout_constraintStart_toStartOf="@+id/tvPrecio1"
+                tools:layout_editor_absoluteY="351dp" />
+
+            <TextView
+                android:id="@+id/tvPrecio1"
+                android:layout_width="130dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="36dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/tvNombre1"
+                app:layout_constraintStart_toStartOf="@+id/tvNombre1"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre1" />
+
+            <TextView
+                android:id="@+id/tvNombre1"
+                android:layout_width="125dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="60dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/ivDetail"
+                app:layout_constraintStart_toStartOf="@+id/ivDetail"
+                app:layout_constraintTop_toBottomOf="@+id/ivDetail" />
+
+            <ImageView
+                android:id="@+id/ivDetail"
+                android:layout_width="184dp"
+                android:layout_height="164dp"
+                android:layout_marginTop="44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

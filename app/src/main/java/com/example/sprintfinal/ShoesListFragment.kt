@@ -49,10 +49,18 @@ class ShoesListFragment : Fragment() {
     }
 
     fun setRvAdapter(){
-        adapter.setData(ShoesList.getShoeList())   //
+        adapter.setData(ShoesList.getShoesList())   //
         binding.recyclerView.adapter = adapter
     }
-    
+
+    private fun initAdapter(){
+        val adapter= Adapter()
+        val shoesList = ShoesList.getShoesList()
+        adapter.setData(shoesList)
+
+        binding.recyclerView.adapter = adapter
+
+    }
 
     companion object {
         /**

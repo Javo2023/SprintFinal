@@ -2,9 +2,9 @@ package com.example.sprintfinal
 
 class ShoesList {
     companion object{
-        fun getShoeList(): List<Shoes> {
+        fun getShoesList(): List<Shoes> {
             val shoeList = mutableListOf<Shoes>()
-            val shoeItem1 = Shoes("Zapato 1", "https://example.com/zapato1.jpg", 99.99, "Zapatilla dama para toda ocasion, colores variados, material cuero, tallas 36 a 39")
+            val shoeItem1 = Shoes("Zapato 1", "https://www.adidas.cl/zapatillas-duramo-sl/GV7125.html?=null&=null&cm_mmc=AdieSEM_Google_PLA-_-Always_On-_-Shopping-_-GV7125-0004-_-dv%3AeCom-_-cn%3AAlways_On-_-Running&cm_mmc=AdieSEM_Google_PLA-_-PMax-CatchAll-M-_--_--_-dv%3AeCom&cm_mmc1=CL&cm_mmc2=PLA-Multiple-Running-Other-None-CL-LATAM-eCom-Paid_Search&cm_mmca1=CL&cm_mmca2=&gclid=Cj0KCQjwwvilBhCFARIsADvYi7Kf-y_4knLbA8L5BxR-7fl4W-mI6WTgIDx2bt7OAKQKz-AA3CLXCIEaAuueEALw_wcB&gclsrc=aw.dsg", 99.99, "Zapatilla dama para toda ocasion, colores variados, material cuero, tallas 36 a 39")
             shoeList.add(shoeItem1)
             val shoeItem2 = Shoes("Zapato 2", "https://example.com/zapato2.jpg", 79.99, "Zapatilla dama para toda ocasion, colores variados, material cuero, tallas 36 a 39")
             shoeList.add(shoeItem2)

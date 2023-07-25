@@ -9,10 +9,14 @@
         android:id="@+id/shoesListFragment"
         android:name="com.example.sprintfinal.ShoesListFragment"
         android:label="fragment_shoes_list"
-        tools:layout="@layout/fragment_shoes_list" />
+        tools:layout="@layout/fragment_shoes_list" >
+        <action
+            android:id="@+id/action_shoesListFragment_to_fragmentDetail3"
+            app:destination="@id/fragmentDetail" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentDetail"
-        android:name="com.example.sprintfinal.FragmentDetail"
+        android:name="com.example.sprintfinal.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
 </navigation>
