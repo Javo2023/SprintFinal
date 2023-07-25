@@ -11,12 +11,21 @@
         android:label="fragment_shoes_list"
         tools:layout="@layout/fragment_shoes_list" >
         <action
-            android:id="@+id/action_shoesListFragment_to_fragmentDetail3"
+            android:id="@+id/action_shoesListFragment_to_fragmentDetail"
             app:destination="@id/fragmentDetail" />
     </fragment>
     <fragment
         android:id="@+id/fragmentDetail"
         android:name="com.example.sprintfinal.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_fragmentDetail_to_fragmentCart"
+            app:destination="@id/fragmentCart" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCart"
+        android:name="com.example.sprintfinal.FragmentCart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
 </navigation>

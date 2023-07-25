@@ -21,7 +21,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>(){
 
         holder.itemView.setOnClickListener {
             // Obtener el NavController desde el Fragmento actual
-            val navController = Navigation.findNavController(it)
+            val navController = findNavController(it)
 
             // Navegar al FragmentDetalle y pasar datos como argumentos
 
@@ -32,7 +32,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>(){
                     putString("detalle",item.detalle)
 
                 }
-            navController.navigate(R.id.action_shoesListFragment_to_fragmentDetail3, bundle)
+            navController.navigate(R.id.action_shoesListFragment_to_fragmentDetail, bundle)
 
         }
     }

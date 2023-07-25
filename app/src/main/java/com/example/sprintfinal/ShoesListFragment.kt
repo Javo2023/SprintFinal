@@ -24,6 +24,7 @@ class ShoesListFragment : Fragment() {
 
     var adapter = Adapter()
 
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,6 +35,7 @@ class ShoesListFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
 
     }
 
@@ -46,6 +48,7 @@ class ShoesListFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return binding.root
+
     }
 
     fun setRvAdapter(){
@@ -53,14 +56,7 @@ class ShoesListFragment : Fragment() {
         binding.recyclerView.adapter = adapter
     }
 
-    private fun initAdapter(){
-        val adapter= Adapter()
-        val shoesList = ShoesList.getShoesList()
-        adapter.setData(shoesList)
 
-        binding.recyclerView.adapter = adapter
-
-    }
 
     companion object {
         /**
@@ -81,4 +77,5 @@ class ShoesListFragment : Fragment() {
                 }
             }
     }
+    
 }

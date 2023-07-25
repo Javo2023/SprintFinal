@@ -27,7 +27,7 @@ private const val ARG_PARAM4 = "detalle"
  */
 class DetailFragment : Fragment() {
     fun onSomeButtonClick() {
-        findNavController().navigate(R.id.action_shoesListFragment_to_fragmentDetail3)
+        findNavController().navigate(R.id.action_shoesListFragment_to_fragmentDetail)
     }
 
 
