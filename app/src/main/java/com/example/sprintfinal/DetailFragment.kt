@@ -55,6 +55,10 @@ class DetailFragment : Fragment() {
         binding.tvDetail.text = param4
         binding.tvPrecio1.text = param3
 
+        binding.buttonAddToCart.setOnClickListener(){
+
+        }
+
 
 
         // Inflate the layout for this fragment

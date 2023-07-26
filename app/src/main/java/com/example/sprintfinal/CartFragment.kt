@@ -21,6 +21,8 @@ private const val ARG_PARAM2 = "param2"
 class CartFragment : Fragment() {
     lateinit var binding : FragmentCartBinding
 
+    var adapterCart = AdapterCart()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -37,8 +39,17 @@ class CartFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentCartBinding.inflate(layoutInflater,container, false)
+        setRvAdapterCart()
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        return binding.root
+        // Inflate the layout for this fragment
+
+    }
+    fun setRvAdapterCart(){
+        adapterCart.setData(ShoesList.getShoesList())   //
+        binding.recyclerViewCart.adapter = adapterCart
     }
 
     companion object {
